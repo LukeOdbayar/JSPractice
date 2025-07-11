@@ -1,0 +1,6 @@
+* {
+    background-color: aqua;
+}
+.screen {
+    display: flex;
+}
