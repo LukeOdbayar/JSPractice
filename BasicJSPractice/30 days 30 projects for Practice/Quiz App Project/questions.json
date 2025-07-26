@@ -1,0 +1,50 @@
+[
+  {
+    "question": "1. Sign your name _______ the dotted line.",
+    "answer": {
+      "a": "after",
+      "b": "behind",
+      "c": "on"
+    }
+  },
+  {
+    "question": "2. When we flew _______ the clouds, we could see the earth's surface.",
+    "answer": { "a": "in", "b": "in", "c": "below" }
+  },
+  {
+    "question": "3. Can I sit _______ you at the movie theatre?",
+    "answer": { "a": "beside", "b": "beside", "c": "inside" }
+  },
+  {
+    "question": "4. The kids are playing _______ the backyard.",
+    "answer": { "a": "on", "b": "on", "c": "in" }
+  },
+
+  {
+    "question": "5. Your glasses are right _______ you.",
+    "answer": { "a": "on", "b": "on", "c": "in" }
+  },
+
+  {
+    "question": "6. You can pick up your keys _______ the front desk.",
+    "answer": { "a": "at", "b": "at", "c": "over" }
+  },
+
+  {
+    "question": "7. Let's meet _______ the front door.",
+    "answer": { "a": "at", "b": "at", "c": "below" }
+  },
+
+  {
+    "question": "8. There's a helicopter hovering _______ our house.",
+    "answer": { "a": "on", "b": "on", "c": "under" }
+  },
+  {
+    "question": "9. Didn't you park your car _______ mine?",
+    "answer": { "a": "at", "b": "at", "c": "behind" }
+  },
+  {
+    "question": "10. Please stay _______ the police caution tape.",
+    "answer": { "a": "", "b": "", "c": "" }
+  }
+]
