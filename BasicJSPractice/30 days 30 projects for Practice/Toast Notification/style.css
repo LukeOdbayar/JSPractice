@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color: #f7edff;
+    --btn-bk-color: #333;
+    --txt-color: #fff;
+    --box-shadow: rgba(0, 0, 0, 0.3);
+    --toast-color-succes: green;
+    --toast-color-invalid: orange;
+    --toast-color-error: red;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+.container {
+    margin: 50px;
+}
+
+button {
+    background: var(--btn-bk-color);
+    color: var(--txt-color);
+    border: 0;
+    outline: 0;
+    width: 200px;
+    height: 40px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.toastBox {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.toastBox div {
+    width: 400px;
+    height: 80px;
+    background: var(--txt-color);
+    font-weight: 500;
+    margin: 15px 0;
+    box-shadow: 0 0 20px var(--box-shadow);
+    display: flex;
+    align-items: center;
+    position: relative;
+    transform: translateX(100%);
+    animation: moveLeft 0.5s linear forwards;
+}
+
+@keyframes moveLeft {
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.toastBox div::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    animation: anim 5s linear forwards;
+}
+
+.toastBox .successToast::after {
+    background: var(--toast-color-succes);
+}
+
+.toastBox .errorToast::after {
+    background: var(--toast-color-error);
+}
+
+.toastBox .invalidToast::after {
+    background: var(--toast-color-invalid);
+}
+
+@keyframes anim {
+    100% {
+        width: 0;
+    }
+}
+
+img {
+    width: 30px;
+    height: 30px;
+    margin: 0 20px;
+
+}
