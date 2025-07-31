@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="music-player">
+            <nav>
+                <div class="circle"><img src="icons/chevron-left.svg" alt="" srcset=""></div>
+                <div class="circle"><img src="icons/layout-text-sidebar.svg" alt="" srcset=""></div>
+            </nav>
+            <img class="song-img" src="media/tanjiro-kamado-red-blue-flame-desktop-wallpaper-preview.jpg" alt=""
+                srcset="">
+            <h1>Demon Slayer</h1>
+            <p>Opening 1</p>
+            <audio id="song">
+                <source src="media/Demon Slayer - Opening 1  4K  60FPS  Creditless.mp3" type="audio/mpeg">
+            </audio>
+            <input type="range" value="0" id="progress">
+
+            <div class="controls">
+                <div><img src="icons/skip-backward-circle.svg" alt="" srcset=""></div>
+                <div onclick="playPause()">
+                    <img id="controlIcon" src="icons/play-circle.svg" alt="" srcset="">
+                </div>
+                <div><img src="icons/skip-forward-circle.svg" alt="" srcset=""></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
