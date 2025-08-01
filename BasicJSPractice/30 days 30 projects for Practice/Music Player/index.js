@@ -33,11 +33,9 @@ function playPause() {
   song.play();
 }
 
-if (song.play()) {
-  setInterval(() => {
-    progress.value = song.currentTime;
-  }, 500);
-}
+setInterval(() => {
+  progress.value = song.currentTime;
+}, 500);
 
 progress.onchange = function () {
   song.play();
