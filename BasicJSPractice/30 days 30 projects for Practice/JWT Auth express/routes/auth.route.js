@@ -5,7 +5,7 @@ import { generateTokenAndSetCookie } from "../utils/generateTokenAndSetCookie.js
 
 const router = express.Router();
 
-router.post("/signup", async (request, response) => {
+router.post("/auth/signup", async (request, response) => {
   try {
     const newUser = await createUserManager(request.body);
     console.log({ newUser });
@@ -23,7 +23,7 @@ router.post("/signup", async (request, response) => {
     response.status(400).json({ success: false, message: error.message });
   }
 });
-router.post("/login", login);
-router.post("/logout", logout);
+router.post("/auth/login", login);
+router.post("/auth/logout", logout);
 
 export default router;

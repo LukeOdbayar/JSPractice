@@ -2,8 +2,6 @@ import { User } from "../modules/auth.module.js";
 import bcrypt from "bcrypt";
 import { generateVertificationToken } from "../utils/generateVertificationToken.js";
 import { connectDb } from "../db/connectDB.js";
-// import dotenv from "dotenv";
-// dotenv.config();
 
 export const createUserManager = (function () {
   function validateEmail(email) {
