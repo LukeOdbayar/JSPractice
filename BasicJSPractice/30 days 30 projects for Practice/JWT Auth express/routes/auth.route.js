@@ -25,15 +25,25 @@ router.post("/auth/signup", async (request, response) => {
     response.status(400).json({ success: false, message: error.message });
   }
 });
-router.post("/auth/login", login);
+router.post("/auth/login", async (request, response) => {
+  try {
+    const loginUser = await login(request.body);
+    generateTokenAndSetCookie(response, loginUser.id);
+    response.status(200).json({
+      success: true,
+      message: "Welcome to my auth service",
+      user: loginUser,
+    });
+  } catch (error) {
+    console.error("LOGIN", error);
+    response.status(400).json({ success: false, message: error.message });
+  }
+});
 router.post("/auth/logout", logout);
 
 router.delete("/auth/delete/:userId", async (request, response) => {
   try {
     const delUser = await deleteUser(request.body);
-    if (!delUser) {
-      throw new Error("This user is not found");
-    }
 
     response.status(200).json({
       success: true,
