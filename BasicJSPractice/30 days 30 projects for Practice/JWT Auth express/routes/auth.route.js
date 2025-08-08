@@ -1,9 +1,6 @@
 import express from "express";
 import { login, logout } from "../controllers/auth.controller.js";
-import {
-  createUserManager,
-  deleteUser,
-} from "../controllers/auth.controller.js";
+import { createUserManager } from "../controllers/auth.controller.js";
 import { generateTokenAndSetCookie } from "../utils/generateTokenAndSetCookie.js";
 
 const router = express.Router();
@@ -41,18 +38,4 @@ router.post("/auth/login", async (request, response) => {
 });
 router.post("/auth/logout", logout);
 
-router.delete("/auth/delete/:userId", async (request, response) => {
-  try {
-    const delUser = await deleteUser(request.body);
-
-    response.status(200).json({
-      success: true,
-      message: "User deleted successfully",
-      user: delUser,
-    });
-  } catch (error) {
-    console.error("DELETE", error);
-    response.status(400).json({ success: false, message: error.message });
-  }
-});
 export default router;

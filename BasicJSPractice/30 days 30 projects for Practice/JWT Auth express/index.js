@@ -1,4 +1,5 @@
 import express from "express";
+import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
 
 import authRoutes from "./routes/auth.route.js";
@@ -9,6 +10,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 app.use(express.json()); //allows us to parse incoming requests :req.body
+app.use(cookieParser()); //allows us to parse incoming cookie
 
 app.get("/api/v1/", (request, response) => {
   response.send("Hello World!");
